@@ -1,0 +1,9 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Amplifier_Operational1")(type "KiCad")(uri "${KIPRJMOD}/Amplifier_Operational.kicad_sym")(options "")(descr ""))
+  (lib (name "Graphite")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/Lib/Graphite.kicad_sym")(options "")(descr ""))
+  (lib (name "MCP41050-I_SN")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/MCP41050-I_SN/MCP41050-I_SN.kicad_sym")(options "")(descr ""))
+  (lib (name "KY-040")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/KY-040/KY-040.kicad_sym")(options "")(descr ""))
+  (lib (name "HC05")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/HC05/HC05.kicad_sym")(options "")(descr ""))
+  (lib (name "LTC1050HS8_TRPBF")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/LTC1050HS8_TRPBF/LTC1050HS8_TRPBF.kicad_sym")(options "")(descr ""))
+)

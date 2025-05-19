@@ -1,0 +1,9 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Arduino_MountingHole")(type "KiCad")(uri "${KICAD7_TEMPLATE_DIR}/Arduino_Mega/Arduino_MountingHole.pretty")(options "")(descr ""))
+  (lib (name "MCP41050-I_SN")(type "KiCad")(uri "U:/4A/Capteur/KICAD/MCP41050-I_SN")(options "")(descr ""))
+  (lib (name "KY-040")(type "KiCad")(uri "U:/4A/Capteur/KICAD/KY-040")(options "")(descr ""))
+  (lib (name "HC05")(type "KiCad")(uri "U:/4A/Capteur/KICAD/HC05")(options "")(descr ""))
+  (lib (name "LTC1050HS8_TRPBF")(type "KiCad")(uri "U:/4A/Capteur/KICAD/LTC1050HS8_TRPBF")(options "")(descr ""))
+  (lib (name "Capteur4A")(type "KiCad")(uri "/Users/thomasnoblet/Not In Paris Now Dropbox/Thomas Noblet/x3 Capteur/02 Kicad/MaLibrairieEmpreinte.pretty")(options "")(descr ""))
+)
