@@ -4247,6 +4247,10 @@
 		(uuid "2a8aea9d-6c49-4e16-8288-f7413b5ad86e")
 	)
 	(no_connect
+		(at 74.93 74.93)
+		(uuid "2d124a5d-0cfb-4053-889c-5df275addbc8")
+	)
+	(no_connect
 		(at 74.93 31.75)
 		(uuid "3cfac496-75ff-4c26-abfb-147811bac9f8")
 	)
@@ -4299,8 +4303,8 @@
 		(uuid "aef786fb-66aa-4501-8a15-e83c9971258d")
 	)
 	(no_connect
-		(at 74.93 72.39)
-		(uuid "c1cc98a4-6148-4f06-9411-cebd91047630")
+		(at 74.93 77.47)
+		(uuid "c3655851-9e57-482a-ac83-632444384792")
 	)
 	(no_connect
 		(at 34.29 31.75)
@@ -4321,10 +4325,6 @@
 	(no_connect
 		(at 21.59 67.31)
 		(uuid "f8dcf331-3321-42fc-90c2-5a8fbfa729f0")
-	)
-	(no_connect
-		(at 74.93 69.85)
-		(uuid "fc206eea-848e-4801-9d3a-c7e2e508ca93")
 	)
 	(wire
 		(pts
@@ -5728,6 +5728,50 @@
 			)
 		)
 	)
+	(global_label "BluetoothInput"
+		(shape input)
+		(at 74.93 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b86ca8a4-cf87-4d58-9526-a5bb2663ec75")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.859 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BluetoothOutput"
+		(shape input)
+		(at 74.93 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "be5eb724-5237-4917-8e3e-08747132f5dc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.3104 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "D12"
 		(shape input)
 		(at 74.93 39.37 0)
@@ -5838,28 +5882,6 @@
 			)
 		)
 	)
-	(global_label "BluetoothInput"
-		(shape input)
-		(at 74.93 74.93 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dfcf767d-2b69-4a8a-bcee-42da8bd91052")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.859 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SCL"
 		(shape input)
 		(at 90.17 139.7 180)
@@ -5878,28 +5900,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BluetoothOutput"
-		(shape input)
-		(at 74.93 77.47 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e1715a59-48a2-425c-bbbe-af02bc4961e9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 93.3104 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -7635,7 +7635,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "1K"
 			(at 231.14 39.37 90)
 			(effects
 				(font
