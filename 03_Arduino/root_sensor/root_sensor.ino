@@ -21,22 +21,34 @@
 #define Rab 50000 // Resistance MAX du MCP41050
 #define Rw 125 //Resistance Interne du MCP41050
 
+//Adresse du LCD
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
+//Valeur de base de la résistance du MCP41050
 byte resistanceValue = 128;
 
-String inputBuffer = ""; // Pour stocker les commandes Bluetooth
+// Pour stocker les commandes Bluetooth
+String inputBuffer = ""; 
 
+//Connection du HC05 avec les Tx & Rx de l'arduino
 SoftwareSerial BTserial(Rx, Tx);
+
 
 void setup() {
   Serial.begin(baudrate);       // Moniteur série USB
+
   BTserial.begin(baudrate);     // Communication Bluetooth HC-05
 
-  pinMode(CS, OUTPUT);
+  pinMode(CS, OUTPUT);          //Initialisation du MCP41050
   digitalWrite(CS, HIGH);
-
   SPI.begin();
   setResistance(resistanceValue);
+
+  lcd.init();            // Initialisation de l'écran
+  lcd.backlight();       
+  lcd.setCursor(0, 0);   
+  lcd.print("LCD Start");
+  delay(1000);
 }
 
 void loop() {
@@ -44,7 +56,8 @@ void loop() {
   int valA0 = analogRead(OutRaw);
   int valA1 = analogRead(OutAmp);
 
-  // Lecture des données entrantes via Bluetooth 
+  
+  // Lecture des données reçues Bluetooth
   while (BTserial.available()) {
     char c = BTserial.read();
 
@@ -61,9 +74,27 @@ void loop() {
   BTserial.print(" ");
   BTserial.println(valA1);
 
-  delay(200);
-}
+  float tensA1 = valA1*5.0/1023;
+  char TabA1[5]; 
+  dtostrf(tensA1, 4, 2, TabA1);
 
+  float gain = (valA0 != 0) ? (float)valA1 / valA0 : 0.0;
+  char TabGain[5]; 
+  dtostrf(gain, 4, 2, TabGain);
+  ScreenDisp (TabA1, TabGain);
+
+  delay(500);
+}
+void ScreenDisp(char* tension, char* gain) {
+  lcd.setCursor(0, 0);
+  lcd.print("Out: ");
+  lcd.print(tension);
+  lcd.print("V");
+  lcd.setCursor(0, 1);
+  lcd.print("Gain: ");
+  lcd.print(gain;
+
+  }
 void setResistance(byte value) {
   digitalWrite(CS, LOW);  
   SPI.transfer(0x11);  
@@ -83,11 +114,11 @@ void processCommand(String cmd) {
       Serial.print("Resistance set to ");
       Serial.println(resistanceValue);
     } else {
-      serial.print("Value out of range (0-255)");
+      Serial.print("Value out of range (0-255)");
     }
 
   } else {
-    serial.print("Unknown command"); //Affichage de l'erreur sur le moniteur série
-    serial.println(String cmd)
+    Serial.print("Unknown command"); //Affichage de l'erreur sur le moniteur série
+    Serial.println(cmd);
   }
 }
