@@ -104,25 +104,6 @@
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QLabel" name="gain_th">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>180</y>
-       <width>231</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Futura</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QLabel" name="R2">
      <property name="geometry">
       <rect>
@@ -164,14 +145,43 @@
     <widget class="QPushButton" name="send">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>210</y>
+       <x>60</x>
+       <y>220</y>
        <width>113</width>
        <height>32</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Futura</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>Send</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>180</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="minimum">
+      <number>3</number>
+     </property>
+     <property name="maximum">
+      <number>801</number>
      </property>
     </widget>
    </widget>

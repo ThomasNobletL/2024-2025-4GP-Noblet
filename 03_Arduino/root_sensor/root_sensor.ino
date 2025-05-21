@@ -25,7 +25,7 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 //Valeur de base de la résistance du MCP41050
-byte resistanceValue = 128;
+byte resistanceValue = 0; //Resistance de base : 125 Ohms, Gain de base : 3 
 
 // Pour stocker les commandes Bluetooth
 String inputBuffer = ""; 
@@ -69,10 +69,10 @@ void loop() {
     }
   }
 
-  // Envoi des données sur Bluetooth
-  BTserial.print(valA0);
-  BTserial.print(" ");
-  BTserial.println(valA1);
+  // Envoi des données en Bluetooth 
+  String message = String(valA0) + "," + String(valA1) +"\n";
+  BTserial.print(message);
+  Serial.print(message);
 
   float tensA1 = valA1*5.0/1023;
   char TabA1[5]; 
@@ -92,7 +92,7 @@ void ScreenDisp(char* tension, char* gain) {
   lcd.print("V");
   lcd.setCursor(0, 1);
   lcd.print("Gain: ");
-  lcd.print(gain;
+  lcd.print(gain);
 
   }
 void setResistance(byte value) {
@@ -110,9 +110,11 @@ void processCommand(String cmd) {
     int val = cmd.substring(3).toInt();
     if (val >= 0 && val <= 255) {    //Vérification que la valeur envoyée est dans la plage
       resistanceValue = val;
+      Serial.println(val);
       setResistance(resistanceValue);
       Serial.print("Resistance set to ");
       Serial.println(resistanceValue);
+      Serial.print("there");
     } else {
       Serial.print("Value out of range (0-255)");
     }

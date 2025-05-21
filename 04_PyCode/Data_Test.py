@@ -14,7 +14,7 @@ import time
 # Remplace par ton port série Bluetooth :
 # Windows : "COM5", "COM6", etc.
 # macOS : "/dev/tty.HC-05-DevB", ou utilise `ls /dev/tty.*` pour trouver le bon
-port = "/dev/cu.HC0501"       # <-- À adapter à ton système
+port = "/dev/cu.HC0528"       # <-- À adapter à ton système
 baudrate = 9600
 
 try:
