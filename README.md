@@ -14,7 +14,7 @@
 
 *Contexte*
 
-Le projet consiste à reproduire une technologie low-tech de capteur de pression en graphène, se basant sur l'article "Pencil Drawn Strain Gauges and Chemiresistors on Paper" de Cheng-Wei Lin, Zhibo Zhao, Jaemyung Kim & Jiaxing Huang.
+Le projet consiste à reproduire une technologie low-tech de capteur de flexion en graphène, se basant sur l'article "Pencil Drawn Strain Gauges and Chemiresistors on Paper" de Cheng-Wei Lin, Zhibo Zhao, Jaemyung Kim & Jiaxing Huang.
 
 *Principe*
 
