@@ -9,26 +9,8 @@ from PyQt6.QtCore import QUrl
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QComboBox, QPushButton, QLabel, QVBoxLayout
 from PyQt6.QtCore import QThread, pyqtSignal
 from PyQt6.uic import loadUi
+from PyQt6.QtGui import QPixmap
 import random
-
-class FakeSerialThread(QThread):
-    data_received = pyqtSignal(int,int)
-
-    def __init__(self, interval=1):
-        super().__init__()
-        self._running = True
-        self.interval = interval  # intervalle entre les envois en secondes
-
-    def run(self):
-        while self._running:
-            a = random.randint(0, 100)
-            b = random.randint(0, 100)
-            self.data_received.emit(a,b)
-            time.sleep(self.interval)
-            
-    def stop(self):
-        self._running = False
-        
 class SerialThread(QThread):
     data_received = pyqtSignal(int, int, int)  # émet 3 entiers reçus
 
@@ -89,23 +71,20 @@ class MainInterface(QMainWindow):
 
         loadUi(ui_path, self)
 
-        # Assure-toi que tous les widgets existent sinon les créer par défaut
         self._quit.clicked.connect(self.close)
-        
+
+        #Creation des objets de l'interface si ils ne sont pas là de base
+
         if not hasattr(self, "bluetooth_box") or self.bluetooth_box is None:
             self.bluetooth_box = QComboBox(self)
         if not hasattr(self, "bluetooth_confirm") or self.bluetooth_confirm is None:
             self.bluetooth_confirm = QPushButton("Confirmer", self)
-        if not hasattr(self, "widget_3D") or self.widget_3D is None:
-            self.widget_3D = QWidget(self)
         if not hasattr(self, "arduino_name") or self.arduino_name is None:
             self.arduino_name = QLabel(self)
         if not hasattr(self, "value") or self.value is None:
             self.value = QLabel(self)
         if not hasattr(self, "gain") or self.gain is None:
             self.gain = QLabel(self)
-        if not hasattr(self, "widget_SVG") or self.widget_SVG is None:
-            self.widget_SVG = QWidget(self)
         if not hasattr(self, "spinBox") or self.spinBox is None:
             self.spinBox = QspinBox(self)
         if not hasattr(self, "send") or self.send is None:
@@ -115,16 +94,14 @@ class MainInterface(QMainWindow):
         if not hasattr(self, "R2") or self.R2 is None:
             self.R2 = QLabel(self)
 
-
         self.populate_ports()
 
         self.send.clicked.connect(self.send_spinbox_value)
-        self.R2.setText(f"100000 \u03A9")
+        self.R2.setText(f"Ramp = 100000 \u03A9")
         self.bluetooth_confirm.clicked.connect(self.confirm_selection)
         self.serial_thread = None
         
     def closeEvent(self, event):
-        # Stopper le thread proprement avant de fermer la fenêtre
         if self.serial_thread is not None:
             self.serial_thread.stop()
         event.accept()
@@ -140,7 +117,6 @@ class MainInterface(QMainWindow):
     def confirm_selection(self):
         selected_port = self.bluetooth_box.currentData()
         print(f"Port sélectionné : {selected_port}")
-        # Exemple pour mettre à jour les labels :
         port_name = os.path.basename(selected_port) 
         self.arduino_name.setText(f"Arduino: {port_name}")
         self.value.setText("pls wait...")
@@ -154,7 +130,6 @@ class MainInterface(QMainWindow):
             test_serial.close()
             self.serial_conn = serial.Serial(selected_port, baudrate=9600, timeout=1)
 
-            # Lancer le thread réel
             self.serial_thread = SerialThread(selected_port,baudrate=9600)
             self.serial_thread.data_received.connect(self.update_values)
             self.serial_thread.start()
@@ -165,9 +140,8 @@ class MainInterface(QMainWindow):
             self.value.setText("Connexion failed")
         
     def update_values(self, a, b):
-        # Mettre à jour le label 'value' avec les données reçues
         sortie = a*5.0/1023.0 #conversion en volt
-        gain = b/a #calcul du gain observé
+        gain = a / b if b != 0 else 0 #calcul gain observé, inutile ici
         self.value.setText(f"Mes = {sortie} V")
         self.gain.setText(f"Gain = {gain}")
 
@@ -176,7 +150,7 @@ class MainInterface(QMainWindow):
         MCP_res = 100000/(value -1)
         D = round(MCP_res-125*(256/50000))
 
-        self.R1.setText(f"{MCP_res:.1f} \u03A9")
+        self.R1.setText(f"RMCP = {MCP_res:.1f} \u03A9")
 
         if isinstance(self.serial_thread, SerialThread):
             self.serial_thread.send_data(f"SET{D}\n")

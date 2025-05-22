@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2049.54 921.46">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #1d1d1b;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-family: Futura-Medium, Futura;
+        font-size: 105px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <polygon class="cls-2" points="121.98 128.12 121.98 226.77 1927.56 226.77 1927.56 396.85 121.98 396.85 121.98 496.63 2049.54 496.63 2049.54 128.12 121.98 128.12"/>
+      <rect class="cls-2" x="121.98" width="595.28" height="226.77"/>
+      <rect class="cls-2" x="121.98" y="397.71" width="595.28" height="226.77"/>
+    </g>
+  </g>
+  <g id="Calque_2" data-name="Calque 2">
+    <rect class="cls-4" x="297.23" y="29.11" width="194.82" height="154.16" rx="41.87" ry="41.87"/>
+    <rect class="cls-4" x="297.23" y="442.47" width="194.82" height="154.16" rx="41.87" ry="41.87"/>
+    <text class="cls-3" transform="translate(367.9 140.92)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-3" transform="translate(373.85 549.06)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-3" transform="translate(1540.7 698.19)"><tspan x="0" y="0">Pin 1 : V</tspan></text>
+    <text class="cls-3" transform="translate(1946.55 733.16) scale(.58)"><tspan x="0" y="0">CC</tspan></text>
+    <text class="cls-3" transform="translate(1540.7 856.19)"><tspan x="0" y="0">Pin 2 : V</tspan></text>
+    <text class="cls-3" transform="translate(1946.55 891.16) scale(.58)"><tspan x="0" y="0">out</tspan></text>
+    <line class="cls-1" x1="1489.88" y1="549.06" x2="1489.88" y2="791.46"/>
+  </g>
+</svg>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11561.01 4422">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-width: 11px;
+      }
+
+      .cls-8, .cls-2, .cls-9, .cls-5, .cls-10 {
+        fill: #1d1d1b;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 4px;
+      }
+
+      .cls-3, .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-9 {
+        font-size: 207.74px;
+      }
+
+      .cls-9, .cls-10 {
+        font-family: Futura-Medium, Futura;
+        font-weight: 500;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        stroke-width: 19px;
+      }
+
+      .cls-10 {
+        font-size: 105px;
+      }
+
+      .cls-12 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-6 {
+        stroke-linecap: round;
+        stroke-width: 25px;
+      }
+    </style>
+  </defs>
+  <g id="Calque_2" data-name="Calque 2">
+    <line class="cls-2" x1="7068.93" y1="4229.77" x2="7068.93" y2="2371.59"/>
+    <path class="cls-3" d="M7068.93,1849.03v-996.54l-.97-.88c-89.87-81.49-89.41-222.85.97-303.76h0V159.44h3958.62"/>
+    <polyline class="cls-3" points="5747.37 699.19 7951.85 699.19 7951.85 1044.99"/>
+    <line class="cls-3" x1="7951.85" y1="1408.68" x2="7951.85" y2="2109.44"/>
+    <polyline class="cls-3" points="7951.85 699.19 8899.28 699.19 8899.28 2109.44"/>
+    <line class="cls-3" x1="7652.02" y1="2109.44" x2="10961.83" y2="2109.44"/>
+    <polyline class="cls-3" points="10233.67 3276.35 10233.67 3861.54 7068.93 3861.54 3602.74 3861.54 3602.74 3436.88"/>
+    <line class="cls-3" x1="6799.9" y1="2295.75" x2="1916.26" y2="2295.75"/>
+    <line class="cls-3" x1="3602.74" y1="2960.12" x2="3602.74" y2="2295.75"/>
+    <path class="cls-3" d="M5747.37,3861.54v-1429.81l-5.94-5.94c-70.81-70.81-68.11-186.43,5.94-253.85h0v-211.39"/>
+    <line class="cls-3" x1="4367.52" y1="2295.75" x2="4367.52" y2="3861.54"/>
+    <polyline class="cls-3" points="6945.04 1960.55 5747.37 1960.55 5747.37 699.19"/>
+    <polyline class="cls-3" points="1959.83 1907.69 2651.03 1907.69 2651.03 159.44 7068.93 159.44"/>
+    <circle class="cls-8" cx="3602.74" cy="2293.57" r="29.91"/>
+    <circle class="cls-8" cx="4367.52" cy="2293.57" r="29.91"/>
+    <circle class="cls-8" cx="5748.6" cy="1960.55" r="29.91"/>
+    <circle class="cls-8" cx="4367.52" cy="3861.54" r="29.91"/>
+    <circle class="cls-8" cx="5747.37" cy="3861.54" r="29.91"/>
+    <circle class="cls-8" cx="7068.93" cy="3861.54" r="29.91"/>
+    <circle class="cls-8" cx="7951.85" cy="699.19" r="29.91"/>
+    <circle class="cls-8" cx="7951.85" cy="2100.95" r="29.91"/>
+    <circle class="cls-8" cx="8899.28" cy="2109.44" r="29.91"/>
+    <circle class="cls-8" cx="7068.93" cy="159.44" r="29.91"/>
+    <line class="cls-3" x1="10306.3" y1="391.99" x2="10306.3" y2="153.03"/>
+    <line class="cls-3" x1="10306.3" y1="850.93" x2="10306.3" y2="935.84"/>
+    <circle class="cls-8" cx="10306.3" cy="153.03" r="29.91"/>
+  </g>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <polygon class="cls-8" points="215.85 2198.36 215.85 2028.28 2021.43 2028.28 2021.43 1929.63 93.87 1929.63 93.87 2298.13 2021.43 2298.13 2021.43 2198.36 215.85 2198.36"/>
+      <rect class="cls-8" x="1426.15" y="1801.51" width="595.28" height="226.77" transform="translate(3447.58 3829.78) rotate(-180)"/>
+      <rect class="cls-8" x="1426.15" y="2199.22" width="595.28" height="226.77" transform="translate(3447.58 4625.21) rotate(-180)"/>
+    </g>
+    <rect class="cls-7" x="1651.36" y="1830.61" width="194.82" height="154.16" rx="41.87" ry="41.87" transform="translate(3497.53 3815.39) rotate(-180)"/>
+    <rect class="cls-7" x="1651.36" y="2243.98" width="194.82" height="154.16" rx="41.87" ry="41.87" transform="translate(3497.53 4642.12) rotate(-180)"/>
+    <text class="cls-10" transform="translate(1723.79 1942.42)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-10" transform="translate(1726.88 2350.57)"><tspan x="0" y="0">2</tspan></text>
+    <rect class="cls-4" x="5.5" y="1686.55" width="2089.35" height="845.79"/>
+    <rect class="cls-1" x="5611.39" y="2917.61" width="271.96" height="601.15" transform="translate(11494.73 6436.37) rotate(180)"/>
+    <rect class="cls-1" x="4231.54" y="2917.61" width="271.96" height="601.15" transform="translate(8735.03 6436.37) rotate(180)"/>
+    <rect class="cls-1" x="9480.15" y="1800.38" width="271.96" height="601.15" transform="translate(11717.08 -7515.17) rotate(90)"/>
+    <rect class="cls-1" x="8763.3" y="852.49" width="271.96" height="601.15"/>
+    <g>
+      <line class="cls-6" x1="7809.55" y1="1101.48" x2="8094.16" y2="1101.48"/>
+      <line class="cls-6" x1="7809.55" y1="1218.94" x2="8094.16" y2="1218.94"/>
+      <line class="cls-6" x1="7951.85" y1="1101.48" x2="7951.85" y2="902.7"/>
+      <line class="cls-6" x1="7951.85" y1="1241.52" x2="7951.85" y2="1408.68"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="3460.44" y1="3158.89" x2="3745.05" y2="3158.89"/>
+      <line class="cls-6" x1="3460.44" y1="3276.35" x2="3745.05" y2="3276.35"/>
+      <line class="cls-6" x1="3602.74" y1="3158.89" x2="3602.74" y2="2960.12"/>
+      <line class="cls-6" x1="3602.74" y1="3298.94" x2="3602.74" y2="3466.09"/>
+    </g>
+    <rect class="cls-1" x="2474.93" y="1993" width="271.96" height="601.15" transform="translate(4904.48 -317.34) rotate(90)"/>
+    <text class="cls-9" transform="translate(8206.95 1241.52)"><tspan x="0" y="0">1µF</tspan></text>
+    <text class="cls-9" transform="translate(9175.92 1216.31)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">00 kΩ</tspan></text>
+    <text class="cls-9" transform="translate(9394.53 2505.78)"><tspan x="0" y="0">1 kΩ</tspan></text>
+    <text class="cls-9" transform="translate(5962.45 3288.52)"><tspan x="0" y="0">1 kΩ</tspan></text>
+    <text class="cls-9" transform="translate(4558.09 3288.51)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">00 kΩ</tspan></text>
+    <text class="cls-9" transform="translate(2645.91 3288.51)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">00 nF</tspan></text>
+    <text class="cls-9" transform="translate(2310.34 2705.87)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">0 kΩ</tspan></text>
+    <g>
+      <path class="cls-8" d="M11146.54,110.92v-18.87h44.63v-43.82h18.76v43.82h44.63v18.87h-44.63v43.82h-18.76v-43.82h-44.63Z"/>
+      <path class="cls-8" d="M11401.55,48.44h-48.28l-7.71,25.97c1.15-.13,2.25-.24,3.3-.3,1.05-.07,2.01-.1,2.89-.1,15.22,0,27.69,5.14,37.43,15.42,9.8,10.21,14.71,23.3,14.71,39.26s-5.54,30.09-16.63,40.78c-11.09,10.69-25.05,16.03-41.89,16.03-20.76,0-37.13-9.74-49.09-29.21l17.85-15.11c4.94,8.39,9.91,14.3,14.91,17.75,5,3.38,11.12,5.07,18.36,5.07,9.47,0,17.41-3.31,23.84-9.94,6.42-6.83,9.64-15.11,9.64-24.85s-3.18-18.19-9.54-24.55c-6.36-6.56-14.3-9.84-23.84-9.84-10.62,0-19.78,4.63-27.49,13.9h-7.81l24.65-82.36h64.71v22.11Z"/>
+      <path class="cls-8" d="M11447.2,26.32l43.31,108.54,43.92-108.54h25.87l-70.29,168.38-68.67-168.38h25.87Z"/>
+    </g>
+    <text/>
+    <text class="cls-9" transform="translate(10961.83 2028.28)"><tspan x="0" y="0">Out</tspan></text>
+    <polygon class="cls-4" points="7283.87 4237.48 6854 4237.48 7068.93 4414.87 7283.87 4237.48"/>
+    <polygon class="cls-1" points="6799.9 1679.56 6799.9 2539.32 7652.02 2109.44 6799.9 1679.56"/>
+    <text class="cls-9" transform="translate(6854 1926.17)"><tspan x="0" y="0">_</tspan></text>
+    <text class="cls-9" transform="translate(6843.95 2370.08)"><tspan x="0" y="0">+</tspan></text>
+    <g>
+      <line class="cls-6" x1="10091.36" y1="2969.15" x2="10375.98" y2="2969.15"/>
+      <line class="cls-6" x1="10091.36" y1="3086.61" x2="10375.98" y2="3086.61"/>
+      <line class="cls-6" x1="10233.67" y1="2969.15" x2="10233.67" y2="2770.38"/>
+      <line class="cls-6" x1="10233.67" y1="3109.2" x2="10233.67" y2="3276.35"/>
+    </g>
+    <text class="cls-9" transform="translate(9315.55 3192.78)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">00 nF</tspan></text>
+    <line class="cls-5" x1="6093.26" y1="2917.61" x2="5440.59" y2="3570.28"/>
+    <polygon class="cls-8" points="5404.53 3502.39 5501.66 3622.1 5361.61 3635.66 5404.53 3502.39"/>
+    <text class="cls-9" transform="translate(7225.96 2542.16)"><tspan class="cls-14" x="0" y="0">L</tspan><tspan class="cls-13" x="81.96" y="0">T</tspan><tspan class="cls-11" x="176.6" y="0">C </tspan><tspan class="cls-12" x="386.26" y="0">1</tspan><tspan x="502" y="0">050</tspan></text>
+    <polygon class="cls-4" points="10521.24 935.84 10091.36 935.84 10306.3 1113.23 10521.24 935.84"/>
+    <g>
+      <line class="cls-6" x1="10164" y1="543.73" x2="10448.61" y2="543.73"/>
+      <line class="cls-6" x1="10164" y1="661.19" x2="10448.61" y2="661.19"/>
+      <line class="cls-6" x1="10306.3" y1="543.73" x2="10306.3" y2="344.96"/>
+      <line class="cls-6" x1="10306.3" y1="683.78" x2="10306.3" y2="850.93"/>
+    </g>
+    <text class="cls-9" transform="translate(10489.35 699.19)"><tspan class="cls-12" x="0" y="0">1</tspan><tspan x="115.74" y="0">00 nF</tspan></text>
+  </g>
+</svg>
