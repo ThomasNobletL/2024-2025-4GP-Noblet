@@ -38,7 +38,7 @@ Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de 1 + 
 Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (OldPCB). Cet configuartion est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liason série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
 <p align="center"><em>Old PCB</em></p>
 
-En l'occurence, aucun des codes python et arduino fournis fonctionnera durablement avec le premier PCB, une erreurs série arrivera relativement rapidement, le PCB a donc été modifié à l'aide de câble pour correspondre à ce PCB. 
+En l'occurence, aucun des codes python et arduino fournis fonctionnera durablement avec le premier PCB (30s), une erreurs série arrivera relativement rapidement, le PCB a donc été modifié à l'aide de câble pour correspondre à ce PCB. 
 
 <p align="center"><em>New PCB</em></p>
 
