@@ -1,4 +1,4 @@
-<h1 align = "center"> Projet Capteur Graphène 4A - GP <h1> 
+<h1 align = "center"> Projet Capteur Graphite 4A - GP <h1> 
 <h2 align="center"> Par NOBLET Thomas </h2>
 <h3 align="center"> INSA de Toulouse, département Génie Physique, année 2024 - 2025 </h3>
   
@@ -8,13 +8,13 @@
   </a>
 </p>
 
-## <h2 align = "center"> Mesure de contrainte sous arduino & python d'un capteur graphène <h1>
+## <h2 align = "center"> Mesure de contrainte sous arduino & python d'un capteur graphite <h1>
 
 ### 1. Description
 
 *Contexte*
 
-Le projet consiste à reproduire une technologie low-tech de capteur de flexion en graphène, se basant sur l'article "Pencil Drawn Strain Gauges and Chemiresistors on Paper" de Cheng-Wei Lin, Zhibo Zhao, Jaemyung Kim & Jiaxing Huang.
+Le projet consiste à reproduire une technologie low-tech de capteur de flexion en graphite, se basant sur l'article "Pencil Drawn Strain Gauges and Chemiresistors on Paper" de Cheng-Wei Lin, Zhibo Zhao, Jaemyung Kim & Jiaxing Huang.
 
 *Principe*
 
