@@ -69,3 +69,4 @@ Avec la déformation $\epsilon$ = e/D, e étant l'épaisseur du papier (0,1 mm)
 *Utilisation d'un module Wifi ESP8266*
 
   Remplacer le HC-O5 par un module Wifi ESP8266 ou simplement utiliser une carte Arduino Uno Wifi pourrait permettre de se connecter plus aisément avec les OS Mac sur un même réseau. 
+  
