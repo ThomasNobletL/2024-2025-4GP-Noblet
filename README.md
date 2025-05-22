@@ -18,7 +18,7 @@ Le projet consiste à reproduire une technologie low-tech de capteur de flexion 
 
 *Principe*
 
-Les traces de crayons sur du papier se comportent comme des résistances dont la valeur varie en fonction de la courbure du papier sur lequels elles sont dessinées. 
+Des traces de crayons sur du papier se comportent comme des résistances dont la valeur varie en fonction de la courbure du papier sur lequels elles sont dessinées. 
 
 *Contenu du projet*
 
