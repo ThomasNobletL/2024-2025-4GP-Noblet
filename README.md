@@ -27,7 +27,7 @@ Une [datasheet du capteur](05_DataSheet/Graphite_Sensor_DATA_SHEET.pdf) a pu êt
 ***Matériel utilisé (non exhaustif)***
 - **Capteur de contrainte en graphène** : Mine HB conseillée
 - **LTC1050** : Amplificateur du circuit 
-- **MCP 41050** : Varier le gain du circuit d'amplification
+- **MCP 41050** : Permet de faire varier le gain du circuit d'amplification
 - **Module Bluetooth HC-05** : Récupérer les données en Bluetooth  
 - **Ecran OLED SS1306 en I2C** : Affichage des données sur le PCB
 
