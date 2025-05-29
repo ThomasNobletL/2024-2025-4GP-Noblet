@@ -1,4 +1,4 @@
-25230495567179490
+25221763834712316
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6541,41 +6541,6 @@ Capacitor_Tantalum_SMD
 CP_EIA-7361-438_AVX-U_HandSolder
 Tantalum Capacitor SMD AVX-U (7361-438 Metric), IPC-7352 nominal, (Body size from: http://datasheets.avx.com/NOS.pdf), generated with kicad-footprint-generator
 capacitor tantalum
-0
-2
-2
-Capteur4A
-HCO5
-Through hole straight pin header, 1x06, 2.54mm pitch, single row
-Through hole pin header THT 1x06 2.54mm single row
-0
-6
-6
-Capteur4A
-LTC1050
-
-
-0
-8
-8
-Capteur4A
-MCP41050
-
-
-0
-8
-8
-Capteur4A
-OLED
-Through hole straight pin header, 1x04, 2.54mm pitch, single row
-Through hole pin header THT 1x04 2.54mm single row
-0
-4
-4
-Capteur4A
-Sensor
-Through hole straight pin header, 1x02, 2.54mm pitch, single row
-Through hole pin header THT 1x02 2.54mm single row
 0
 2
 2
