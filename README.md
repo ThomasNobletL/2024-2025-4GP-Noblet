@@ -22,8 +22,7 @@ Des traces de crayons sur du papier se comportent comme des résistances dont la
 
 *Contenu du projet*
 
-Une [datasheet du capteur](05_DataSheet/Graphite_Sensor_DATA_SHEET.pdf)
-datasheet du capteur a pu être réalisée à l'aide d'une carte Arduino Uno, d'un circuit d'amplification (dont le PCB a été réalisé sur KICAD) et d'une interface python.
+Une [datasheet du capteur](05_DataSheet/Graphite_Sensor_DATA_SHEET.pdf) a pu être réalisée à l'aide d'une carte Arduino Uno, d'un circuit d'amplification (dont le PCB a été réalisé sur KICAD) et d'une interface python.
 
 ***Matériel utilisé (non exhaustif)***
 - **Capteur de contrainte en graphène** : Mine 4H minimum conseillée
