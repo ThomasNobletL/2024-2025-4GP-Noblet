@@ -90,7 +90,7 @@ Le "run" permet de lancer le stockage des données reçues, mais écrase la pré
 
 ### 4. Résultats
 
-Les mesures ont été effectuées à l'aide de demi-cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.
+Les mesures ont été effectuées à l'aide de cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.
 Avec la déformation $\epsilon$ = e/D, e étant l'épaisseur du papier (0,1 mm).
 
 <p align="center">
