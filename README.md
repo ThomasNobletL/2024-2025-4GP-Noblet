@@ -25,7 +25,7 @@ Des traces de crayons sur du papier se comportent comme des résistances dont la
 Une [datasheet du capteur](05_DataSheet/Graphite_Sensor_DATA_SHEET.pdf) a pu être réalisée à l'aide d'une carte Arduino Uno, d'un circuit d'amplification (dont le PCB a été réalisé sur KICAD) et d'une interface python.
 
 ***Matériel utilisé (non exhaustif)***
-- **Capteur de contrainte en graphène** : Mine 4H minimum conseillée
+- **Capteur de contrainte en graphène** : Mine HB conseillée
 - **LTC1050** : Amplificateur du circuit 
 - **MCP 41050** : Varier le gain du circuit d'amplification
 - **Module Bluetooth HC-05** : Récupérer les données en Bluetooth  
