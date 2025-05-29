@@ -42,19 +42,45 @@ Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de R2/R
 
 <p align="center"><em>Figure 1 : Schéma Amplification </em></p>
 
+<p align="center">
+
+  <img src="06_Other/Figure_2_ArduinoModules.png" alt="Circuit réel" width="400"/>
+</p>
+<p align="center"><em>Figure 2 : Circuit réel </em></p>
+
 Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (OldPCB). Cet configuartion est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liason série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
-<p align="center"><em>Figure 2 : PCB Incorrect </em></p>
+
+<p align="center">
+
+  <img src="06_Other/Figure_3_PCB_Incorrect.png" alt="PCB Incorrect" width="400"/>
+</p>
+<p align="center"><em>Figure 3 : PCB Incorrect </em></p>
 
 En l'occurence, aucun des codes python et arduino fournis fonctionnera durablement avec le premier PCB (30s), une erreurs série arrivera relativement rapidement, le PCB a donc été modifié à l'aide de câble pour correspondre à ce nouveau PCB. 
 
-<p align="center"><em>Figure 3 : PCB Corrigé</em></p>
+<p align="center">
+
+  <img src="06_Other/Figure_4_PCB_Corrige.png" alt="PCB Corrigé" width="400"/>
+</p>
+<p align="center"><em>Figure 4 : PCB Corrigé</em></p>
 
 ### 3. Interface & code Python 
 
 La valeur du gain observé affichée permet simplement d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop fraible (d'où l'intêret du circuit d'amplification).
 
 
-<p align="center"><em>Figure 4 : Architecture du code</em></p>
+<p align="center">
+
+  <img src="06_Other/Figure_5_SchemaCode.png" alt="Architecture du code" width="400"/>
+</p>
+
+<p align="center"><em>Figure 5 : Architecture du code</em></p>
+
+<p align="center">
+
+  <img src="06_Other/Figure_6_Interface.png" alt="Architecture du code" width="400"/>
+</p>
+
 
 <p align="center"><em>Figure 5 : Interface Qt</em></p>
 
@@ -64,16 +90,29 @@ La valeur du gain observé affichée permet simplement d'obtenir un ordre de gra
 Les mesures ont étée effectuées à l'aide de demi-cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.
 Avec la déformation $\epsilon$ = e/D, e étant l'épaisseur du papier (0,1 mm).
 
+<p align="center">
+
+  <img src="06_Other/Graphique_1_Reponse_Compression.png" alt="Réponse en compression" width="400"/>
+</p>
 
 <p align="center"><em>Graphique 1 : Réponse en compression</em></p>
 
+<p align="center">
+
+  <img src="06_Other/Graphique_2_Reponse_Detente.png" alt="Réponse en détente" width="400"/>
+</p>
 <p align="center"><em>Graphique 2 : Réponse en détente</em></p>
 
 On remarque que la variation de résistance en compression et en détente est plus importante pour une mine moyennement dure et grasse (HB) que pour des mines plus grasses (2B, 4B).
 
+<p align="center">
+
+  <img src="06_Other/Graphique_3_ComparaisonFlexSensor.png" alt="Comparaison avec un Flex sensor" width="400"/>
+</p>
+
 <p align="center"><em>Graphique 3 : Comparaison avec un Flex sensor  </em></p>
 
-En comparant avec un flex sensor de Spectra Symbol, on remarque que la réponse en détente est assez cohérente avec celle du capteur en graphite produit (le flex sensor de Spectra Symbol ne permet pas de comparer en compression).
+En comparant avec un flex sensor de Spectra Symbol, on remarque que la réponse en détente est assez cohérente avec celle du capteur en graphite produit (le flex sensor de Spectra Symbol ne permet pas de comparer en compression, [Datasheet](06_Other/FLEX_SENSOR_-_SPECIAL_EDITION_DATA_SHEET.pdf)).
 
 
 ### 5. Limites et perspectives
