@@ -35,6 +35,10 @@ Une datasheet du capteur a pu être réalisée à l'aide d'une carte Arduino Uno
 
 Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de R2/R1. La résistance R1 est un potentiomètre MCP41050 (de 125Ω à 50kΩ) donnant une plage de gain de 2 à 800.
 
+<p align="center">
+
+  <img src="6_Other/Figure_1_SchemaAmp.png" alt="Schéma Amplification" width="400"/>
+</p>
 
 <p align="center"><em>Figure 1 : Schéma Amplification </em></p>
 
