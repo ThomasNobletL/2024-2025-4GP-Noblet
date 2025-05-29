@@ -37,7 +37,7 @@ Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de R2/R
 
 <p align="center">
 
-  <img src="6_Other/Figure_1_SchemaAmp.png" alt="Schéma Amplification" width="400"/>
+  <img src="06_Other/Figure_1_SchemaAmp.png" alt="Schéma Amplification" width="400"/>
 </p>
 
 <p align="center"><em>Figure 1 : Schéma Amplification </em></p>
