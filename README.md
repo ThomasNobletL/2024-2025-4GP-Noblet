@@ -48,7 +48,7 @@ Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de R2/R
 </p>
 <p align="center"><em>Figure 2 : Circuit réel </em></p>
 
-Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (OldPCB). Cet configuartion est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liason série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
+Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (PCB Incorrect). Cet configuartion est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liason série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
 
 <p align="center">
 
@@ -66,8 +66,10 @@ En l'occurence, aucun des codes python et arduino fournis fonctionnera durableme
 
 ### 3. Interface & code Python 
 
-La valeur du gain observé affichée permet simplement d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop fraible (d'où l'intêret du circuit d'amplification).
 
+L'architecture du code est décrite si dessous. La valeur de la résistance ainsi que l'affichage des mesures se fait directement depuis l'interface Qt, qui communique avec un thread gérant l'acquisition et l'envoie de données vers l'arduino qui les réceptionnes. Le code fonctionne à la fois en liaison série et bluetooth, il suffit de choisir depuis "Port choice".
+
+Une valeur du gain observé est affichée dans l'interface, mais ne permet que d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop faible (d'où l'intêret du circuit d'amplification).
 
 <p align="center">
 
@@ -112,14 +114,13 @@ On remarque que la variation de résistance en compression et en détente est pl
 
 <p align="center"><em>Graphique 3 : Comparaison avec un Flex sensor  </em></p>
 
-En comparant avec un flex sensor de Spectra Symbol, on remarque que la réponse en détente est assez cohérente avec celle du capteur en graphite produit (le flex sensor de Spectra Symbol ne permet pas de comparer en compression, [Datasheet](06_Other/FLEX_SENSOR_-_SPECIAL_EDITION_DATA_SHEET.pdf)).
-
+En comparant avec un flex sensor de Spectra Symbol, on remarque que la réponse en détente est assez cohérente avec celle du capteur en graphite produit (le flex sensor de Spectra Symbol ne permet pas de comparer en compression, [Datasheet](06_Other/FLEX_SENSOR_-_SPECIAL_EDITION_DATA_SHEET.pdf)). De plus, les mesures on étés prises sans utiliser le circuit d'amplification. 
 
 ### 5. Limites et perspectives
 
 *Le Bluetooth du HC-05*
 
-  La connexion entre le module HC-05 et un PC est **trop insable** pour utiliser seulement l'interface python fournie **sur Mac OS**, l'appairage échoue souvent ou se coupe régulièrement. 
+  La connexion entre le module HC-05 et un PC est **trop instable** pour utiliser seulement l'interface python fournie **sur Mac OS**, l'appairage échoue souvent ou se coupe régulièrement. Il est préférable d'utiliser une connexion avec un port série. 
   
 *Utilisation d'un module Wifi ESP32*
 
