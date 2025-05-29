@@ -1,16 +1,13 @@
+import pyqtgraph as pg
 import sys
 import serial.tools.list_ports
 import serial
 import time
 import os
-import math
-from PyQt6.QtQuickWidgets import QQuickWidget
-from PyQt6.QtCore import QUrl
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QComboBox, QPushButton, QLabel, QVBoxLayout
-from PyQt6.QtCore import QThread, pyqtSignal
+from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout
+from PyQt6.QtCore import QThread, pyqtSignal, QTimer
 from PyQt6.uic import loadUi
-from PyQt6.QtGui import QPixmap
-import random
+
 class SerialThread(QThread):
     data_received = pyqtSignal(int, int, int)  # émet 3 entiers reçus
 
@@ -71,28 +68,31 @@ class MainInterface(QMainWindow):
 
         loadUi(ui_path, self)
 
+        self.pushButton_Run.clicked.connect(self.toggle_recording)
+        self.pushButton_Save.clicked.connect(self.save_data)
+
+        self.recording = False
+        self.data_storage = []
+        self.data_index = 0
+
         self._quit.clicked.connect(self.close)
 
-        #Creation des objets de l'interface si ils ne sont pas là de base
+        self.graphWidget = pg.PlotWidget()
+        layout = QVBoxLayout(self.graph_container)  # graph_container est un QWidget dans ton UI
+        layout.addWidget(self.graphWidget)
+        self.graphWidget.setBackground('w')
+        self.graphWidget.setTitle("Tension sortie (V)")
+        self.graphWidget.setLabel('left', 'Voltage', units='V')
+        self.graphWidget.setLabel('bottom', 'Points')
+        self.graphWidget.showGrid(x=True, y=True)
 
-        if not hasattr(self, "bluetooth_box") or self.bluetooth_box is None:
-            self.bluetooth_box = QComboBox(self)
-        if not hasattr(self, "bluetooth_confirm") or self.bluetooth_confirm is None:
-            self.bluetooth_confirm = QPushButton("Confirmer", self)
-        if not hasattr(self, "arduino_name") or self.arduino_name is None:
-            self.arduino_name = QLabel(self)
-        if not hasattr(self, "value") or self.value is None:
-            self.value = QLabel(self)
-        if not hasattr(self, "gain") or self.gain is None:
-            self.gain = QLabel(self)
-        if not hasattr(self, "spinBox") or self.spinBox is None:
-            self.spinBox = QspinBox(self)
-        if not hasattr(self, "send") or self.send is None:
-            self.send = QPushButton(self.send_spinbox_value)
-        if not hasattr(self, "R1") or self.R1 is None:
-            self.R1 = QLabel(self)
-        if not hasattr(self, "R2") or self.R2 is None:
-            self.R2 = QLabel(self)
+
+
+
+        self.x = []
+        self.y = []
+        self.index = 0
+        self.data_line = self.graphWidget.plot(self.x, self.y, pen=pg.mkPen(color='b', width=2))
 
         self.populate_ports()
 
@@ -144,6 +144,11 @@ class MainInterface(QMainWindow):
         gain = a / b if b != 0 else 0 #calcul gain observé, inutile ici
         self.value.setText(f"Mes = {sortie} V")
         self.gain.setText(f"Gain = {gain}")
+        if self.recording:
+            self.x.append(self.index)
+            self.y.append(sortie)
+            self.data_line.setData(self.x, self.y)
+            self.index += 1
 
     def send_spinbox_value(self):
         value = self.spinBox.value()
@@ -156,6 +161,30 @@ class MainInterface(QMainWindow):
             self.serial_thread.send_data(f"SET{D}\n")
         else:
             print("Aucune connexion série active pour l'envoi.")
+
+    def save_data(self):
+        if not self.data_storage:
+            print("Aucune donnée à sauvegarder.")
+            return
+        filename = "data_sortie.txt"
+        try:
+            with open(filename, "w") as f:
+                f.write("Index\tSortie(V)\n")
+                for x, y in self.data_storage:
+                    f.write(f"{x}\t{y:.6f}\n")
+            print(f"Données sauvegardées dans {filename}")
+        except Exception as e:
+            print(f"Erreur lors de la sauvegarde : {e}")
+
+    def toggle_recording(self):
+        self.recording = not self.recording
+        if self.recording:
+            self.pushButton_Run.setText("Arrêter")
+            self.data_storage.clear()
+            self.data_index = 0
+        else:
+            self.pushButton_Run.setText("Démarrer")
+        print(f"Enregistrement {'démarré' if self.recording else 'arrêté'}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

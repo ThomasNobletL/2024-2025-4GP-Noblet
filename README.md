@@ -50,6 +50,11 @@ En l'occurence, aucun des codes python et arduino fournis fonctionnera durableme
 La valeur du gain observé affichée permet simplement d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop fraible (d'où l'intêret du circuit d'amplification).
 
 
+<p align="center"><em>Figure 4 : Architecture du code</em></p>
+
+<p align="center"><em>Figure 5 : Interface Qt</em></p>
+
+
 ### 4. Résultats
 
 Les mesures ont étée effectuées à l'aide de demi-cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.

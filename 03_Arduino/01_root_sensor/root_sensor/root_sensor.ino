@@ -68,8 +68,17 @@ void loop() {
       inputBuffer += c;
     }
   }
-
-  // Envoi des données en Bluetooth 
+  // Lecture des données reçues en série 
+while (Serial.available()) {
+    char c = Serial.read();
+    if (c == '\n' || c == '\r') {
+      processCommand(inputBuffer);
+      inputBuffer = "";
+    } else {
+      inputBuffer += c;
+    }
+  }
+  // Envoi des données en Bluetooth et en série
   String message = String(valA0) + "," + String(valA1) +"\n";
   BTserial.print(message);
   Serial.print(message);
@@ -85,6 +94,8 @@ void loop() {
 
   delay(500);
 }
+
+//Affichage des valeurs de tensions sur l'écran LCD
 void ScreenDisp(char* tension, char* gain) {
   lcd.setCursor(0, 0);
   lcd.print("Out: ");
@@ -95,12 +106,16 @@ void ScreenDisp(char* tension, char* gain) {
   lcd.print(gain);
 
   }
+
+  //Changement de résistances sur le MCP41050, de 50k à 125
 void setResistance(byte value) {
   digitalWrite(CS, LOW);  
   SPI.transfer(0x11);  
   SPI.transfer(value);
   digitalWrite(CS, HIGH);
 }
+
+// Gestions des commandes reçues en bluetooth et en série
 
 void processCommand(String cmd) {
   cmd.trim();
@@ -114,7 +129,6 @@ void processCommand(String cmd) {
       setResistance(resistanceValue);
       Serial.print("Resistance set to ");
       Serial.println(resistanceValue);
-      Serial.print("there");
     } else {
       Serial.print("Value out of range (0-255)");
     }
