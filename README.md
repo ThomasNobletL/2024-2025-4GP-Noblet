@@ -25,7 +25,7 @@ Des traces de crayons sur du papier se comportent comme des résistances dont la
 Une [datasheet du capteur](05_DataSheet/Graphite_Sensor_DATA_SHEET.pdf) a pu être réalisée à l'aide d'une carte Arduino Uno, d'un circuit d'amplification (dont le PCB a été réalisé sur KICAD) et d'une interface python.
 
 ***Matériel utilisé (non exhaustif)***
-- **Capteur de contrainte en graphène** : Mine HB conseillée
+- **Capteur de contrainte en graphite** : Mine HB conseillée
 - **LTC1050** : Amplificateur du circuit 
 - **MCP 41050** : Permet de faire varier le gain du circuit d'amplification
 - **Module Bluetooth HC-05** : Récupérer les données en Bluetooth  
@@ -48,7 +48,7 @@ Le circuit d'amplification utilise un amplificateur LTC1050 avec un gain de R2/R
 </p>
 <p align="center"><em>Figure 2 : Circuit réel </em></p>
 
-Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (PCB Incorrect). Cet configuartion est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liason série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
+Le PCB utilisé est celui-ci, avec les pins Rx et Tx de l'arduino connectées au HC05 (PCB Incorrect). Cette configuration est utilisable si on souhaite uploader le code arduino directement en bluetooth, mais il faut impérativement utiliser les pins 2 et 3 pour un upload depuis le port USB. Les pins 0 et 1 sont également utilisées par la liaison série vers un PC, ce qui provoque des erreurs en utilisant la connexion bluetooth sur ce port.
 
 <p align="center">
 
@@ -69,7 +69,7 @@ En l'occurence, aucun des codes python et arduino fournis fonctionnera durableme
 
 L'architecture du code est décrite si dessous. La valeur de la résistance ainsi que l'affichage des mesures se fait directement depuis l'interface Qt, qui communique avec un thread gérant l'acquisition et l'envoie de données vers l'arduino qui les réceptionnes. Le code fonctionne à la fois en liaison série et bluetooth, il suffit de choisir depuis "Port choice".
 
-Une valeur du gain observé est affichée dans l'interface, mais ne permet que d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop faible (d'où l'intêret du circuit d'amplification).
+Une valeur du gain observé est affichée dans l'interface, mais ne permet que d'obtenir un ordre de grandeur, la sensibilité des mesures sur l'arduino étant de 4,88 mV et le signal d'entrée trop faible (d'où l'intérêt du circuit d'amplification).
 
 <p align="center">
 
@@ -86,10 +86,11 @@ Une valeur du gain observé est affichée dans l'interface, mais ne permet que d
 
 <p align="center"><em>Figure 5 : Interface Qt</em></p>
 
+Le "run" permet de lancer le stockage des données reçues, mais écrase la précédente série réalisée, il faut donc sauvegarder directement après la fin de l'acquisition si le but est de prendre plusieurs séries d'affilée. 
 
 ### 4. Résultats
 
-Les mesures ont étée effectuées à l'aide de demi-cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.
+Les mesures ont été effectuées à l'aide de demi-cylindres de diamètre **D** de **2, 2.5, 3, 3.5, 4, 4.5 et 5 cm** ainsi que de crayons de mines HB, 2B et 4B.
 Avec la déformation $\epsilon$ = e/D, e étant l'épaisseur du papier (0,1 mm).
 
 <p align="center">
